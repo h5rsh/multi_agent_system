@@ -1,0 +1,41 @@
+langchain
+langchain_community
+langchain-core
+langchain-groq
+
+#Environment Variables
+python-dotenv
+
+#Mistral-AI
+
+langchain-mistralai
+
+#Tavily Search Tool
+tavily-python
+
+#Web Scraping
+beautifulsoup4
+requests
+lxml
+
+# Async support (important for agents/tools)
+aiohttp
+
+# Token counting / text utils
+tiktoken
+
+# Logging / debugging (optional but recommended)
+rich
+
+# Retry + robustness
+tenacity
+
+
+# JSON handling improvements
+orjson
+
+# Typing support (helps in bigger projects)
+pydantic
+
+# Optional (for advanced parsing / HTML cleanup)
+html5lib
