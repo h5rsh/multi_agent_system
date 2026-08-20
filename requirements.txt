@@ -40,3 +40,8 @@ pydantic
 
 # Optional (for advanced parsing / HTML cleanup)
 html5lib
+
+# Server
+fastapi
+uvicorn[standard]
+sse-starlette
