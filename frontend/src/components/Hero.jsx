@@ -10,14 +10,14 @@ const EXAMPLES = [
 
 /* Floating gradient orbs — positioned to frame the hero like Mailkit's floating product images */
 const ORBS = [
-  { className: 'top-[8%] left-[5%] w-16 h-16',     gradient: 'from-indigo-200/70 to-violet-200/50',  delay: '0s',   dur: '7s'   },
-  { className: 'top-[10%] right-[8%] w-20 h-20',    gradient: 'from-rose-200/50 to-orange-200/30',    delay: '1.5s', dur: '8s'   },
-  { className: 'top-[38%] left-[3%] w-12 h-12',     gradient: 'from-amber-200/60 to-yellow-200/40',   delay: '3s',   dur: '6s'   },
-  { className: 'top-[22%] right-[5%] w-14 h-14',    gradient: 'from-teal-200/50 to-emerald-200/30',   delay: '0.5s', dur: '9s'   },
-  { className: 'bottom-[22%] left-[7%] w-10 h-10',  gradient: 'from-blue-200/60 to-cyan-200/40',      delay: '2s',   dur: '7.5s' },
-  { className: 'bottom-[18%] right-[10%] w-16 h-16', gradient: 'from-purple-200/40 to-fuchsia-200/20', delay: '4s',   dur: '6.5s' },
-  { className: 'top-[4%] left-[28%] w-8 h-8',       gradient: 'from-emerald-200/50 to-teal-100/30',   delay: '2.5s', dur: '10s'  },
-  { className: 'bottom-[28%] right-[28%] w-6 h-6',  gradient: 'from-pink-200/40 to-rose-100/20',      delay: '5s',   dur: '8s'   },
+  { className: 'top-[8%] left-[5%] w-16 h-16', gradient: 'from-indigo-200/70 to-violet-200/50', delay: '0s', dur: '7s' },
+  { className: 'top-[10%] right-[8%] w-20 h-20', gradient: 'from-rose-200/50 to-orange-200/30', delay: '1.5s', dur: '8s' },
+  { className: 'top-[38%] left-[3%] w-12 h-12', gradient: 'from-amber-200/60 to-yellow-200/40', delay: '3s', dur: '6s' },
+  { className: 'top-[22%] right-[5%] w-14 h-14', gradient: 'from-teal-200/50 to-emerald-200/30', delay: '0.5s', dur: '9s' },
+  { className: 'bottom-[22%] left-[7%] w-10 h-10', gradient: 'from-blue-200/60 to-cyan-200/40', delay: '2s', dur: '7.5s' },
+  { className: 'bottom-[18%] right-[10%] w-16 h-16', gradient: 'from-purple-200/40 to-fuchsia-200/20', delay: '4s', dur: '6.5s' },
+  { className: 'top-[4%] left-[28%] w-8 h-8', gradient: 'from-emerald-200/50 to-teal-100/30', delay: '2.5s', dur: '10s' },
+  { className: 'bottom-[28%] right-[28%] w-6 h-6', gradient: 'from-pink-200/40 to-rose-100/20', delay: '5s', dur: '8s' },
 ]
 
 export default function Hero({ onSubmit, isLoading }) {
@@ -67,14 +67,14 @@ export default function Hero({ onSubmit, isLoading }) {
           style={{ animationDelay: '0.2s' }}
         >
           Four AI agents collaborate to search, analyze, write,
-          and critique — all in real time.
+          and critique, all in real time.
         </p>
 
         {/* ── Search card ──────────────────────────── */}
         <div className="animate-fade-up" style={{ animationDelay: '0.3s' }}>
           <form onSubmit={handleSubmit} className="relative max-w-xl mx-auto">
             <div className="relative flex items-center bg-white rounded-2xl shadow-lg shadow-gray-200/60 border border-gray-100 transition-all duration-300 focus-within:shadow-xl focus-within:shadow-indigo-100/60 focus-within:border-indigo-200">
-              <Search className="absolute left-5 w-5 h-5 text-gray-300 pointer-events-none" />
+              <Search className="absolute left-5 w-5 h-5 text-gray-500 pointer-events-none" />
 
               <input
                 type="text"
@@ -82,7 +82,7 @@ export default function Hero({ onSubmit, isLoading }) {
                 onChange={(e) => setTopic(e.target.value)}
                 placeholder="Enter a research topic..."
                 disabled={isLoading}
-                className="flex-1 bg-transparent pl-14 pr-4 py-5 text-gray-800 placeholder-gray-300 text-base outline-none rounded-2xl disabled:opacity-50"
+                className="flex-1 bg-transparent pl-14 pr-4 py-5 text-gray-800 placeholder-gray-500 text-base outline-none rounded-2xl disabled:opacity-50"
               />
 
               <button

@@ -3,6 +3,8 @@ import Hero from './components/Hero'
 import Pipeline from './components/Pipeline'
 import { Brain, Sparkles } from 'lucide-react'
 
+const API_BASE = import.meta.env.VITE_API_URL || ''
+
 const STEPS = ['search', 'reader', 'writer', 'critic']
 
 function initSteps() {
@@ -39,7 +41,7 @@ export default function App() {
     setError(null)
 
     try {
-      const res = await fetch('/api/research/start', {
+      const res = await fetch(`${API_BASE}/api/research/start`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ topic: inputTopic }),
@@ -47,7 +49,7 @@ export default function App() {
       if (!res.ok) throw new Error(`Server error: ${res.status}`)
       const { task_id } = await res.json()
 
-      const es = new EventSource(`/api/research/stream/${task_id}`)
+      const es = new EventSource(`${API_BASE}/api/research/stream/${task_id}`)
 
       es.onmessage = (e) => {
         const event = JSON.parse(e.data)
